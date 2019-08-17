@@ -1,6 +1,6 @@
 server:
   host: 127.0.0.1
-  port: 16700
+  port: 16652
   disable_auth: True
 
 db: &db
@@ -8,7 +8,7 @@ db: &db
     kwargs:
       scheme: mysql+pymysql
       user: root
-      password: "S21hVW5mYWhvaWYzMnVZa3FkblduYWlud2gK"
+      password: "1234"
       host: 127.0.0.1
       database: oncall
       charset: utf8
