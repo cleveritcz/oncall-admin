@@ -9,7 +9,7 @@ db: &db
       scheme: mysql+pymysql
       user: root
       password: "S21hVW5mYWhvaWYzMnVZa3FkblduYWlud2gK"
-      host: oncall-web_1
+      host: 127.0.0.1
       database: oncall
       charset: utf8
     str: "%(scheme)s://%(user)s:%(password)s@%(host)s/%(database)s?charset=%(charset)s"
