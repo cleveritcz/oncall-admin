@@ -8,7 +8,7 @@ db: &db
     kwargs:
       scheme: mysql+pymysql
       user: root
-      password: "1234"
+      password: "S21hVW5mYWhvaWYzMnVZa3FkblduYWlud2gK"
       host: 127.0.0.1
       database: oncall
       charset: utf8
