@@ -1,0 +1,36 @@
+server:
+  host: 127.0.0.1
+  port: 16652
+  disable_auth: True
+
+db: &db
+  conn:
+    kwargs:
+      scheme: mysql+pymysql
+      user: root
+      password: "S21hVW5mYWhvaWYzMnVZa3FkblduYWlud2gK"
+      host: 127.0.0.1
+      database: oncall
+      charset: utf8
+    str: "%(scheme)s://%(user)s:%(password)s@%(host)s/%(database)s?charset=%(charset)s"
+  query_limit: 500
+  kwargs:
+    pool_recycle: 3600
+    echo: False
+    pool_size: 100
+    max_overflow: 100
+    pool_timeout: 60
+
+ldap:
+  activated: False
+  ldap_url: 'ldaps://ldap.company.com:636'
+  ldap_cert_path: '/etc/ldap_cert.pem'
+  ldap_bind_user: 'cn=binduser,ou=services,dc=company,dc=org'
+  ldap_bind_password: 'abc123'
+  ldap_base_dn: 'ou=accounts,dc=company,dc=org'
+  ldap_search_filter: '(uid=%s)'
+  attrs:
+    full_name: cn
+    email: mail
+#    sms: phone
+#    call: phone
